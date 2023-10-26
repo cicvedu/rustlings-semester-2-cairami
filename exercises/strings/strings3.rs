@@ -12,9 +12,10 @@ fn trim_me(input: &str) -> String {
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There's multiple ways to do this!
-    let mut s = String::from(input);
-    s.push_str(" world!");
-    s
+    format!("{input} world!")
+    // let mut s = String::from(input);
+    // s.push_str(" world!");
+    // s
 }
 
 fn replace_me(input: &str) -> String {
