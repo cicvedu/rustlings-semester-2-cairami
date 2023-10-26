@@ -48,7 +48,7 @@ mod tests {
         let slice = [0, 1, 2];
         let mut input = Cow::from(&slice[..]);
         match abs_all(&mut input) {
-            Cow::Borrowed(_) => Ok(()),// TODO
+            Cow::Borrowed(_) => Ok(()),
             _ => Err("Expected borrow value"),
         }
     }
@@ -61,7 +61,7 @@ mod tests {
         let slice = vec![0, 1, 2];
         let mut input = Cow::from(slice);
         match abs_all(&mut input) {
-            Cow::Owned(_) => Ok(()),// TODO
+            Cow::Owned(_) => Ok(()),
             _ => Err("Expected borrow value"),
         }
     }
@@ -75,7 +75,7 @@ mod tests {
         let mut input = Cow::from(slice);
         match abs_all(&mut input) {
             Cow::Owned(_) => Ok(()),
-            _ => Err("Expected owned value"),// TODO
+            _ => Err("Expected owned value"),
         }
     }
 }
